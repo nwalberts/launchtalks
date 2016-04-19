@@ -8,6 +8,20 @@
 </head>
 <body>
 
+  <div class="top-bar">
+    <div class="top-bar-left">
+      <ul class="dropdown menu" data-dropdown-menu>
+        <li class="menu-text">LaunchTalks</li>
+        <li><a href="#">Future Link</a></li>
+      </ul>
+    </div>
+    <div class="top-bar-right">
+      <ul class="menu">
+        <li><input type="search" placeholder="Search"></li>
+        <li><button type="button" class="button">Search</button></li>
+      </ul>
+    </div>
+  </div>
 
   <div class="row column">
     <% flash.each do |name, msg| %>
@@ -19,7 +33,13 @@
     <% end %>
   </div>
 
-<%= yield %>
+  <div class="container">
+    <div class="row">
+      <div class="column">
+        <%= yield %>
+      </div>
+    </div>
+  </div>
 
 </body>
 </html>
