@@ -1,0 +1,9 @@
+<h2>Talks This Week</h2>
+
+<ul>
+  <% @presentations.each do |presentation| %>
+    <li>
+      <%= presentation.title %>
+    </li>
+  <% end %>
+</ul>
