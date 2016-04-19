@@ -9,8 +9,10 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'foundation-rails'
 gem 'devise'
+gem 'launchy'
 
 group :development, :test do
+  gem 'factory_girl_rails'
   gem 'byebug'
   gem 'pry-rails'
   gem 'rspec-rails'

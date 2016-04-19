@@ -1,0 +1,52 @@
+{
+  "RSpec": {
+    "coverage": {
+      "/Users/Nick/launchtalks/app/models/user.rb": [
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        null
+      ],
+      "/Users/Nick/launchtalks/app/helpers/application_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/Nick/launchtalks/app/controllers/application_controller.rb": [
+        1,
+        1,
+        null,
+        null,
+        1,
+        null,
+        1,
+        14,
+        12,
+        null,
+        null,
+        null
+      ],
+      "/Users/Nick/launchtalks/app/controllers/presentations_controller.rb": [
+        1,
+        1,
+        6,
+        null,
+        null,
+        1,
+        0,
+        null,
+        null
+      ],
+      "/Users/Nick/launchtalks/app/models/presentation.rb": [
+        1,
+        1,
+        1,
+        null
+      ]
+    },
+    "timestamp": 1461099012
+  }
+}
