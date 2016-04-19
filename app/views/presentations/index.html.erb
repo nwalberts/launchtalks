@@ -5,7 +5,7 @@
 <ul>
   <% @presentations.each do |presentation| %>
     <li>
-      <%= presentation.title %>
+      <%= link_to presentation.title, presentation_path(presentation) %>
     </li>
   <% end %>
 </ul>
