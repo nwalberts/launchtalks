@@ -10,6 +10,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'foundation-rails'
 gem 'devise'
 gem 'launchy'
+gem 'carrierwave'
+gem 'mini_magick'
 
 group :development, :test do
   gem 'factory_girl_rails'
