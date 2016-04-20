@@ -5,7 +5,6 @@
         1,
         1,
         null,
-        null,
         1,
         null,
         null,
@@ -162,16 +161,6 @@
         null,
         null
       ],
-      "/Users/Nick/launchtalks/app/controllers/registrations_controller.rb": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0
-      ],
       "/Users/Nick/launchtalks/app/controllers/users_controller.rb": [
         0,
         0,
@@ -200,6 +189,6 @@
         0
       ]
     },
-    "timestamp": 1461184406
+    "timestamp": 1461184624
   }
 }

@@ -2,7 +2,6 @@
 <h4>
 Email: <%= @profile.user.email %><br />
 </h4>
-
 <div class="edit_account">
   <%= link_to "Edit Account Info", edit_user_registration_path %>
 </div>
@@ -21,5 +20,4 @@ Email: <%= @profile.user.email %><br />
   <br><br>
   <% end %><br />
   <%= link_to "Edit Bio", edit_profile_path(@profile) %>
-
 </div>
