@@ -1,6 +1,9 @@
 class PresentationsController < ApplicationController
   def index
-      @presentations = Presentation.all.order(created_at: :desc)
+    if user_signed_in?
+      @profile = current_user.profile
+    end
+    @presentations = Presentation.all.order(created_at: :desc)
   end
 
   def show

@@ -12,8 +12,15 @@
     <div class="top-bar-left">
       <ul class="dropdown menu" data-dropdown-menu>
         <li class="menu-text"><a href="/presentations">LaunchTalks</a></li>
-        <li><a href="/users/sign_up">Sign Up</a></li>
-          <li><a href="/users/sign_out">Log Out</a></li>
+          <% if current_user %>
+          <li><%= link_to "View Profile", profile_path(current_user), class: "nav-link"%></li>
+          <li><%= link_to "Log Out", destroy_user_session_path, class: "nav-link" %></li>
+          <% end %>
+
+          <% if current_user == nil %>
+            <li><%= link_to "Sign In", new_user_session_path, class: "nav-link" %></li>
+            <li><%= link_to "Sign Up", new_user_registration_path, class: "nav-link" %></li>
+          <% end %>
       </ul>
     </div>
     <div class="top-bar-right">

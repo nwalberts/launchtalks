@@ -1,0 +1,25 @@
+<h2> <%= @profile.user.first_name %> <%= @profile.user.last_name %>'s Profile </h2>
+<h4>
+Email: <%= @profile.user.email %><br />
+</h4>
+
+<div class="edit_account">
+  <%= link_to "Edit Account Info", edit_user_registration_path %>
+</div>
+<br>
+<div class="Avatar">
+  <% if @profile.avatar %>
+  <%= image_tag @profile.avatar.thumb.url %>
+   <br />
+  <% end %>
+  <%= link_to "Change Profile Picture", edit_profile_path(@profile) %>
+</div>
+<br>
+<div class="bio">
+  <% if @profile.bio %>
+  <strong>Bio:</strong> <%= @profile.bio %>
+  <br><br>
+  <% end %><br />
+  <%= link_to "Edit Bio", edit_profile_path(@profile) %>
+
+</div>
