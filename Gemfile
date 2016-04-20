@@ -14,6 +14,7 @@ gem 'carrierwave'
 gem 'mini_magick'
 
 group :development, :test do
+  gem 'database_cleaner'
   gem 'factory_girl_rails'
   gem 'byebug'
   gem 'pry-rails'
