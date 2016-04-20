@@ -4,6 +4,7 @@ class ProfilesController < ApplicationController
 
   def show
     @profile = Profile.find(params[:id])
+    @presentations = @profile.user.presentations
   end
 
   def edit
