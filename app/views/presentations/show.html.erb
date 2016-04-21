@@ -6,3 +6,7 @@
   <p> Description: <%= @presentation.description %> </p>
 </div>
 <br>
+
+    <% if current_user == @presentation.user %>
+      <%= link_to 'Edit Presentation', edit_presentation_path(@presentation)%>
+    <% end %>
