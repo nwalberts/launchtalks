@@ -1,8 +1,8 @@
 require 'rails_helper'
 
 feature "visitor sees show page for a presentation" do
-  let(:user) { FactoryGirl.create(:user) }
-  let(:presentation) { FactoryGirl.create(:presentation) }
+  let!(:user) { FactoryGirl.create(:user) }
+  let!(:presentation) { FactoryGirl.create(:presentation) }
 
   scenario "clicks link and is taken to show page for given presentation" do
     visit 'users/sign_in'
