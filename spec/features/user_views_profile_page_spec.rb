@@ -5,6 +5,9 @@ feature "user may view their profile information" do
     FactoryGirl.create(:user)
   end
 
+  let!(:presentation) { FactoryGirl.create(:presentation, user: user) }
+
+
   scenario "user successfully views profile info" do
     visit 'users/sign_in'
     fill_in "Email", with: user.email
@@ -17,6 +20,7 @@ feature "user may view their profile information" do
     expect(page).to have_content user.last_name
     expect(page).to have_content user.email
     expect(page).to have_content "Edit Account Info"
+    expect(page).to have_content presentation.title
   end
 
   scenario "user tries to view profile without being signed in" do

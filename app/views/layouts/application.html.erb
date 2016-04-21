@@ -1,53 +1,59 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>Launchtalks</title>
-  <%= stylesheet_link_tag    'application', media: 'all' %>
-  <%= javascript_include_tag 'application' %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <div class="top-bar">
-    <div class="top-bar-left">
-      <ul class="dropdown menu" data-dropdown-menu>
-        <li class="menu-text"><a href="/presentations">LaunchTalks</a></li>
-          <% if current_user %>
-          <li><%= link_to "View Profile", profile_path(current_user), class: "nav-link"%></li>
-          <li><%= link_to "Log Out", destroy_user_session_path, class: "nav-link" %></li>
-          <% end %>
+    <title><%= content_for?(:title) ? yield(:title) : "LaunchTalks" %></title>
+    <%=favicon_link_tag 'favicon.png'  %>
+    <%= stylesheet_link_tag    "application" %>
+    <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+  </head>
 
-          <% if current_user == nil %>
-            <li><%= link_to "Sign In", new_user_session_path, class: "nav-link" %></li>
-            <li><%= link_to "Sign Up", new_user_registration_path, class: "nav-link" %></li>
-          <% end %>
-      </ul>
-    </div>
-    <div class="top-bar-right">
-      <ul class="menu">
-        <li><input type="search" placeholder="Search"></li>
-        <li><button type="button" class="button">Search</button></li>
-      </ul>
-    </div>
-  </div>
+  <body>
 
-  <div class="row column">
-    <% flash.each do |name, msg| %>
-      <% if msg.is_a?(String) %>
-        <div data-alert class="alert-box round <%= name.to_s == 'notice' ? 'success' : 'alert' %>">
-          <%= content_tag(:div, msg, class: "alert alert-#{name}", style: "color:black") %>
+      <div class="top-bar" data-options="sticky_on: [small, medium, large]">
+        <div class="top-bar-left">
+          <ul class="dropdown menu" data-dropdown-menu>
+            <li class="menu-text"><a href="/presentations">LaunchTalks</a></li>
+              <% if current_user %>
+              <li><%= link_to "View Profile", profile_path(current_user), class: "nav-link"%></li>
+              <li><%= link_to "Log Out", destroy_user_session_path, class: "nav-link" %></li>
+              <% end %>
+
+              <% if current_user == nil %>
+                <li><%= link_to "Sign In", new_user_session_path, class: "nav-link" %></li>
+                <li><%= link_to "Sign Up", new_user_registration_path, class: "nav-link" %></li>
+              <% end %>
+          </ul>
         </div>
-      <% end %>
-    <% end %>
-  </div>
-
-  <div class="container">
-    <div class="row">
-      <div class="column">
-        <%= yield %>
+        <div class="top-bar-right">
+          <ul class="menu">
+            <li><input type="search" placeholder="Search"></li>
+            <li><button type="button" class="button">Search</button></li>
+          </ul>
+        </div>
       </div>
-    </div>
-  </div>
 
-</body>
+      <div class="row column">
+        <% flash.each do |name, msg| %>
+          <% if msg.is_a?(String) %>
+            <div data-alert class="alert-box round <%= name.to_s == 'notice' ? 'success' : 'alert' %>">
+              <%= content_tag(:div, msg, class: "alert alert-#{name}", style: "color:black") %>
+            </div>
+          <% end %>
+        <% end %>
+      </div>
+
+      <div class="container">
+        <div class="row">
+          <div class="column">
+            <%= yield %>
+          </div>
+        </div>
+      </div>
+
+
+  </body>
 </html>

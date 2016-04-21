@@ -18,8 +18,8 @@
         1,
         null,
         1,
-        11,
-        11,
+        13,
+        13,
         null,
         null
       ],
@@ -41,8 +41,8 @@
         null,
         null,
         1,
-        24,
-        22,
+        28,
+        27,
         null,
         null
       ],
@@ -94,10 +94,10 @@
       "/Users/Nick/launchtalks/app/controllers/presentations_controller.rb": [
         1,
         1,
-        16,
-        13,
+        18,
+        15,
         null,
-        16,
+        18,
         null,
         null,
         1,
@@ -144,8 +144,8 @@
         1,
         null,
         1,
-        6,
-        6,
+        7,
+        7,
         null,
         null,
         1,
@@ -164,7 +164,7 @@
         1,
         null,
         1,
-        12,
+        13,
         null,
         null,
         1,
@@ -200,6 +200,6 @@
         0
       ]
     },
-    "timestamp": 1461251386
+    "timestamp": 1461268018
   }
 }

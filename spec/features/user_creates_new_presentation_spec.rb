@@ -27,6 +27,8 @@ feature "user can add new presentation" do
     expect(page).to have_content "Presentation added successfully"
     expect(page).to have_content "How to Tame a Lion"
     expect(page).to have_content "Do try this at the zoo folks!"
+    expect(page).to have_content "Greg Ward"
+
   end
 
   scenario "visitor does not provide proper information for a presentation" do
