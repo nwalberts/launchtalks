@@ -5,14 +5,22 @@ require 'rails_helper'
 # So that I that users can see my talk
 #
 # Acceptance Criteria -
-# [ ] On the new talk page, I should see a form to fill in with fields such as the title and description. I should also be able to upload relevant photos or slides.
-# [ ] On the new page, I should also be able to upload relevant photos or slides.
+# [ ] On the new talk page, I should see a form to fill in with fields such as
+# the title and description. I should also be able to upload relevant photos or
+ # slides.
+# [ ] On the new page, I should also be able to upload relevant photos or slides
 # [ ] I should see a link back to the index page
-# [ ] Once I click the submit button, I should be brought to the talk's show page.
-# [ ] If I am not signed in, I will not be allowed to see the new page, and be prompted to sign in.
+# [ ] Once I click the submit button, I should be brought to the talk's
+# show page.
+# [ ] If I am not signed in, I will not be allowed to see the new page, and be
+# prompted to sign in.
 
 feature "user can add new presentation" do
-  let(:user) { User.create(first_name: "Greg", last_name: "Ward", email: "greg@la.com", password: "password1") }
+  let(:user) { User.create(first_name: "Greg",
+    last_name: "Ward",
+    email: "greg@la.com",
+    password: "password1"
+    ) }
 
   scenario "visitor adds new presentation successfully" do
     visit 'users/sign_in'

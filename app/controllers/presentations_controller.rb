@@ -31,8 +31,8 @@ class PresentationsController < ApplicationController
 
   def presentation_params
     params.require(:presentation).permit(
-    :title,
-    :description
-    ).merge(user: current_user)
+      :title,
+      :description
+      ).merge(user: current_user)
   end
 end
