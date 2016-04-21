@@ -1,23 +1,32 @@
 <h2> <%= @profile.user.first_name %> <%= @profile.user.last_name %>'s Profile </h2>
-<h4>
-Email: <%= @profile.user.email %><br />
-</h4>
+<h6> Email: <%= @profile.user.email %><br/></h6>
 <div class="edit_account">
   <%= link_to "Edit Account Info", edit_user_registration_path %>
 </div>
-<br>
+
 <div class="Avatar">
   <% if @profile.avatar %>
   <%= image_tag @profile.avatar.thumb.url %>
-   <br />
+   <br/>
   <% end %>
   <%= link_to "Change Profile Picture", edit_profile_path(@profile) %>
 </div>
-<br>
+
 <div class="bio">
   <% if @profile.bio %>
   <strong>Bio:</strong> <%= @profile.bio %>
-  <br><br>
-  <% end %><br />
+  <br>
+  <% end %>
   <%= link_to "Edit Bio", edit_profile_path(@profile) %>
+</div>
+<br>
+
+<h5> <%= @profile.user.first_name %> <%= @profile.user.last_name %>'s Presentations</h5>
+
+<div class="profile-presentation-list">
+  <ul>
+    <% @presentations.each do |presentation| %>
+      <li> <%=link_to presentation.title, presentation_path(presentation)%></li>
+    <% end %>
+  </ul>
 </div>

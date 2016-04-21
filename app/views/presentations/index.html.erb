@@ -1,11 +1,15 @@
 <h2>Talks This Week</h2>
 
+<h5><%= link_to "Create New Presentation", new_presentation_path %></h5>
+
+
 <div class="callout">
 
 <ul>
   <% @presentations.each do |presentation| %>
     <li>
-      <%= link_to presentation.title, presentation_path(presentation) %>
+      <%= link_to presentation.title, presentation_path(presentation)%>
+      with <%=presentation.user.first_name%> <%=presentation.user.last_name %>
     </li>
   <% end %>
 </ul>

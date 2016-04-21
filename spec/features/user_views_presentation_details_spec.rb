@@ -16,5 +16,7 @@ feature "visitor sees show page for a presentation" do
 
     expect(page).to have_content presentation.title
     expect(page).to have_content presentation.description
+    expect(page).to have_content presentation.user.first_name
+    expect(page).to have_content presentation.user.last_name
   end
 end

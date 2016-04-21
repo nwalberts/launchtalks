@@ -1,3 +1,5 @@
 <h2> <%= @presentation.title %> </h2>
+<h5>Created by <%= link_to @presentation.user.first_name + " " +
+@presentation.user.last_name, profile_path(@presentation.user) %></h5>
 <p> Description: <%= @presentation.description %> </p>
 <br>
