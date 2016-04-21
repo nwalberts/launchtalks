@@ -1,8 +1,9 @@
 <h2> <%= @profile.user.first_name %> <%= @profile.user.last_name %>'s Profile </h2>
-<h6> Email: <%= @profile.user.email %><br/></h6>
+<span>Email: <%= @profile.user.email %></span><br/>
 <div class="edit_account">
   <%= link_to "Edit Account Info", edit_user_registration_path %>
 </div>
+<br>
 
 <div class="Avatar">
   <% if @profile.avatar %>
@@ -11,8 +12,9 @@
   <% end %>
   <%= link_to "Change Profile Picture", edit_profile_path(@profile) %>
 </div>
+<br>
 
-<div class="bio">
+<div class="bio callout">
   <% if @profile.bio %>
   <strong>Bio:</strong> <%= @profile.bio %>
   <br>
@@ -22,8 +24,7 @@
 <br>
 
 <h5> <%= @profile.user.first_name %> <%= @profile.user.last_name %>'s Presentations</h5>
-
-<div class="profile-presentation-list">
+<div class="profile-presentation-list callout">
   <ul>
     <% @presentations.each do |presentation| %>
       <li> <%=link_to presentation.title, presentation_path(presentation)%></li>
