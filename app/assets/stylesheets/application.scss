@@ -20,64 +20,61 @@
    color: white;
    font-size: 60pt;
    font-weight: 500
- }
+ };
 
  h2 {
    color: black;
- }
+ };
 
  h5 {
    color: black;
    padding: 5px;
- }
+ };
 
  body {
-   background-image: image-url('podium.png');
-   background-repeat: no-repeat;
-   background-position: center center;
-   background-size: cover;
    background-attachment: fixed;
-}
+   background-image: image-url("podium.png");
+   background-position: center center;
+   background-repeat: no-repeat;
+   background-size: cover;
+ };
 
-li{
+  li {
     display:table;
-    margin:0px auto 0px auto;
-}
+    margin:0px auto;
+  };
 
  .main {
    text-align: center;
- }
+ };
 
- // .top-bar {
- //   background-color: #cc3333;
- // }
 
 .menu-text {
   color: white;
   font-size: 30pt;
-}
+};
 
  .main-motto {
    text-align: center;
    color: white;
-   font-size: 30pt;
    font-family: "quatro-slab", sans-serif;
+   font-size: 30pt;
    font-weight: 200
- }
+ };
 
  .nav-link {
    font-size: 20px;
    font-weight: 500;
- }
+ };
 
  .top-bar-right {
    padding: 15px;
- }
+ };
 
 
 .email {
   color: black;
-}
+};
 
  // body {
  //   background-color: $black;
