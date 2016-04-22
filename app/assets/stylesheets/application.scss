@@ -16,18 +16,53 @@
 
  */
 
- $red: #d93240;
- $blue: #638ca6;
- $grey: #bfd4d9;
- $green: #0f5959;
- $teal: #17a697;
- $white: #ffffff;
- $black: #000000;
- $font-sans: "Copperplate", "Copperplate Gothic Light", sans-serif;
- $headers: Impact;
+ h1 {
+   color: white;
+   font-size: 60pt;
+   font-weight: 500
+ }
 
- .menu-text {
-   font-size: 30px;
+ h2 {
+   color: black;
+ }
+
+ h5 {
+   color: black;
+   padding: 5px;
+ }
+
+ body {
+   background-image: image-url('podium.png');
+   background-repeat: no-repeat;
+   background-position: center center;
+   background-size: cover;
+   background-attachment: fixed;
+}
+
+li{
+    display:table;
+    margin:0px auto 0px auto;
+}
+
+ .main {
+   text-align: center;
+ }
+
+ // .top-bar {
+ //   background-color: #cc3333;
+ // }
+
+.menu-text {
+  color: white;
+  font-size: 30pt;
+}
+
+ .main-motto {
+   text-align: center;
+   color: white;
+   font-size: 30pt;
+   font-family: "quatro-slab", sans-serif;
+   font-weight: 200
  }
 
  .nav-link {
@@ -38,6 +73,11 @@
  .top-bar-right {
    padding: 15px;
  }
+
+
+.email {
+  color: black;
+}
 
  // body {
  //   background-color: $black;
@@ -55,11 +95,7 @@
  //   padding-left: 120px;
  // }
  //
- // h2 {
- //   color: lighten($blue, 10%);
- //   font-family: $headers;
- //   padding: 5px;
- // }
+
 
  // h3 {
  //   color: $blue;
