@@ -11,3 +11,7 @@
   </div>
   <br>
 </div>
+
+  <% if current_user == @presentation.user %>
+    <%= link_to 'Edit Presentation', edit_presentation_path(@presentation)%>
+  <% end %>
