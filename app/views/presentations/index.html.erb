@@ -1,16 +1,26 @@
-<h2>Talks This Week</h2>
+<div class="main">
+  <div class="main-head">
+    <h1>Welcome to LaunchTalks</h1>
+  </div>
 
-<h5><%= link_to "Create New Presentation", new_presentation_path %></h5>
+  <p class="main-motto">
+    Learn to present the human way
+  </p>
 
+  <br>
 
-<div class="callout">
+  <h5><%= link_to "Create New Presentation", new_presentation_path %></h5>
 
-<ul>
-  <% @presentations.each do |presentation| %>
-    <li>
-      <%= link_to presentation.title, presentation_path(presentation)%>
-      with <%=presentation.user.first_name%> <%=presentation.user.last_name %>
-    </li>
-  <% end %>
-</ul>
+  <div class="callout">
+    <h2>Talks This Week</h2>
+    <ul>
+      <% @presentations.each do |presentation| %>
+        <li>
+          <%= link_to presentation.title, presentation_path(presentation)%>
+          with <%=presentation.user.first_name%> <%=presentation.user.last_name %>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+
 </div>

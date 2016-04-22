@@ -1,12 +1,17 @@
-<h2> <%= @presentation.title %> </h2>
-<h5>Created by <%= link_to @presentation.user.first_name + " " +
-@presentation.user.last_name, profile_path(@presentation.user) %></h5>
-
-<div class="presentation-description callout">
-  <p> Description: <%= @presentation.description %> </p>
-</div>
 <br>
 
-    <% if current_user == @presentation.user %>
-      <%= link_to 'Edit Presentation', edit_presentation_path(@presentation)%>
-    <% end %>
+<div class="profile-page callout">
+
+  <h2> <%= @presentation.title %> </h2>
+  <h5>Created by <%= link_to @presentation.user.first_name + " " +
+  @presentation.user.last_name, profile_path(@presentation.user) %></h5>
+
+  <div class="presentation-description callout">
+    <p> Description: <%= @presentation.description %> </p>
+  </div>
+  <br>
+</div>
+
+  <% if current_user == @presentation.user %>
+    <%= link_to 'Edit Presentation', edit_presentation_path(@presentation)%>
+  <% end %>

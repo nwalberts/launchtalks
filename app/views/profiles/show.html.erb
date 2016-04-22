@@ -1,33 +1,36 @@
-<h2> <%= @profile.user.first_name %> <%= @profile.user.last_name %>'s Profile </h2>
-<span>Email: <%= @profile.user.email %></span><br/>
-<div class="edit_account">
-  <%= link_to "Edit Account Info", edit_user_registration_path %>
-</div>
 <br>
+<div class="profile-page callout">
 
-<div class="Avatar">
-  <% if @profile.avatar %>
-  <%= image_tag @profile.avatar.thumb.url %>
-   <br/>
-  <% end %>
-  <%= link_to "Change Profile Picture", edit_profile_path(@profile) %>
-</div>
-<br>
-
-<div class="bio callout">
-  <% if @profile.bio %>
-  <strong>Bio:</strong> <%= @profile.bio %>
+  <h2> <%= @profile.user.first_name %> <%= @profile.user.last_name %>'s Profile </h2>
+  <p class="email">Email: <%= @profile.user.email %></p>
+    <%= link_to "Edit Account Info", edit_user_registration_path %>
   <br>
-  <% end %>
-  <%= link_to "Edit Bio", edit_profile_path(@profile) %>
-</div>
-<br>
+  <br>
 
-<h5> <%= @profile.user.first_name %> <%= @profile.user.last_name %>'s Presentations</h5>
-<div class="profile-presentation-list callout">
-  <ul>
-    <% @presentations.each do |presentation| %>
-      <li> <%=link_to presentation.title, presentation_path(presentation)%></li>
+  <div class="Avatar">
+    <% if @profile.avatar %>
+    <%= image_tag @profile.avatar.thumb.url %>
+     <br/>
     <% end %>
-  </ul>
+    <%= link_to "Change Profile Picture", edit_profile_path(@profile) %>
+  </div>
+  <br>
+
+  <div class="bio callout">
+    <% if @profile.bio %>
+    <strong>Bio:</strong> <%= @profile.bio %>
+    <br>
+    <% end %>
+    <%= link_to "Edit Bio", edit_profile_path(@profile) %>
+  </div>
+  <br>
+
+  <h5> <%= @profile.user.first_name %> <%= @profile.user.last_name %>'s Presentations</h5>
+  <div class="profile-presentation-list callout">
+    <ul>
+      <% @presentations.each do |presentation| %>
+        <li> <%=link_to presentation.title, presentation_path(presentation)%></li>
+      <% end %>
+    </ul>
+  </div>
 </div>
