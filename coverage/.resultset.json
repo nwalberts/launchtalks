@@ -25,16 +25,16 @@
       ],
       "/Users/Nick/launchtalks/app/helpers/application_helper.rb": [
         1,
+        1,
+        4,
+        4,
+        null,
         null
       ],
       "/Users/Nick/launchtalks/app/controllers/application_controller.rb": [
         1,
         1,
         1,
-        null,
-        1,
-        9,
-        null,
         null,
         1,
         1,
@@ -64,10 +64,10 @@
         null,
         1,
         null,
-        1,
+        null,
         1,
         null,
-        0,
+        null,
         null,
         null,
         null,
@@ -222,6 +222,6 @@
         0
       ]
     },
-    "timestamp": 1461272073
+    "timestamp": 1461533070
   }
 }

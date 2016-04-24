@@ -13,7 +13,7 @@ gem 'mini_magick'
 gem 'sass-rails', '~> 5.0'
 gem 'parallax-rails'
 gem 'fog'
-
+gem 'yt', '~> 0.25.5'
 
 group :development, :test do
   gem 'database_cleaner'
