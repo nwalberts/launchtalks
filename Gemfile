@@ -13,7 +13,7 @@ gem 'mini_magick'
 gem 'sass-rails', '~> 5.0'
 gem 'parallax-rails'
 gem 'fog'
-
+gem 'yt', '~> 0.25.5'
 
 group :development, :test do
   gem 'database_cleaner'
@@ -26,6 +26,7 @@ group :development, :test do
   gem 'factory_girl'
   gem 'valid_attribute'
   gem 'shoulda-matchers', require: false
+  gem "dotenv-rails"
 end
 
 group :development do

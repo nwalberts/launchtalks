@@ -6,6 +6,12 @@
   <h5>Created by <%= link_to @presentation.user.first_name + " " +
   @presentation.user.last_name, profile_path(@presentation.user) %></h5>
 
+  <% if @presentation.video %>
+  <div class="embed-container">
+    <%= embed(@presentation.video) %>
+  </div>
+  <% end %>
+
   <div class="presentation-description callout">
     <p> Description: <%= @presentation.description %> </p>
   </div>
