@@ -7,8 +7,6 @@ Rails.application.routes.draw do
     get "users/sign_out" => "devise/sessions#destroy"
   end
 
-
-
   resources :presentations
   resources :profiles, only: [:show, :edit, :update]
 
