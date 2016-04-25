@@ -4,7 +4,7 @@ Devise.setup do |config|
 
   require 'devise/orm/active_record'
   require 'omniauth-google-oauth2'
-  config.omniauth :google_oauth2, "917516849402-6jo0l5gcpab88unndn4h757sgl5er34e.apps.googleusercontent.com", "hZ9CuKWXlnQLd-quKO82AMDf", { access_type: "offline", approval_prompt: "" }
+  config.omniauth :google_oauth2, ENV["GOOGLE_CLIENT_ID"], ENV["GOOGLE_CLIENT_SECRET"], { access_type: "offline", approval_prompt: "" }
   config.case_insensitive_keys = [:email]
   config.strip_whitespace_keys = [:email]
   config.skip_session_storage = [:http_auth]
