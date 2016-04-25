@@ -28,8 +28,8 @@ class User < ActiveRecord::Base
           last_name: last_name,
           provider: access_token.provider,
           email: data["email"],
-          uid: access_token.uid ,
-          password: Devise.friendly_token[0,20],
+          uid: access_token.uid,
+          password: Devise.friendly_token[0,20]
         )
       end
    end
