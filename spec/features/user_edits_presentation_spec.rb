@@ -28,11 +28,12 @@ feature "creator edits presentation data" do
     click_button "Log in"
 
     click_link presentation.title
-    
+
     click_link "Edit Presentation"
 
     fill_in 'Title', with: "What Even Is CSS?"
     fill_in 'Description', with: "AAAAAHHHHHHHH"
+    fill_in 'Video URL', with: "https://www.youtube.com/watch?v=Bi3VR_TWIoM"
 
     click_button "Submit"
 

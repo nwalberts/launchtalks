@@ -1,11 +1,22 @@
-<h2>New Presentation Form </h2>
+<span class="form-header"> New Presentation Form </span>
 
 <%= form_for @presentation do |f| %>
+  <div class="form-field">
   <%=f.label :title %>
   <%=f.text_field :title %>
+  </div>
 
-  <%=f.label :description %>
-  <%=f.text_area :description %>
+  <div class="form-field">
+    <%=f.label :description%>
+    <%=f.text_area :description %>
+  </div>
 
-  <%= f.submit "Add Presentation" %>
+  <div class="form-field">
+    <%= f.label :video, "Video URL" %><br>
+    <%= f.text_field :video %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Add Presentation" %>
+  </div>
 <% end %>

@@ -17,7 +17,6 @@ class PresentationsController < ApplicationController
   def create
     @presentation = Presentation.new(presentation_params)
     @user = current_user
-
     if @presentation.save
       flash[:notice] = "Presentation added successfully"
       redirect_to presentation_path(@presentation)
@@ -50,7 +49,8 @@ class PresentationsController < ApplicationController
   def presentation_params
     params.require(:presentation).permit(
       :title,
-      :description
+      :description,
+      :video
       ).merge(user: current_user)
   end
 end

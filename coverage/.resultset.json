@@ -18,16 +18,16 @@
         1,
         null,
         1,
-        16,
-        16,
+        17,
+        17,
         null,
         null
       ],
       "/Users/Nick/launchtalks/app/helpers/application_helper.rb": [
         1,
         1,
-        4,
-        4,
+        3,
+        3,
         null,
         null
       ],
@@ -45,8 +45,8 @@
         null,
         null,
         1,
-        32,
-        31,
+        34,
+        33,
         null,
         null
       ],
@@ -54,6 +54,7 @@
         1,
         1,
         1,
+        null,
         null
       ],
       "/Users/Nick/launchtalks/app/uploaders/avatar_uploader.rb": [
@@ -64,10 +65,10 @@
         null,
         1,
         null,
-        null,
+        1,
         1,
         null,
-        null,
+        0,
         null,
         null,
         null,
@@ -98,10 +99,14 @@
       "/Users/Nick/launchtalks/app/controllers/presentations_controller.rb": [
         1,
         1,
-        21,
-        18,
+        22,
+        19,
         null,
-        21,
+        22,
+        null,
+        null,
+        1,
+        5,
         null,
         null,
         1,
@@ -109,19 +114,14 @@
         null,
         null,
         1,
+        4,
+        4,
+        4,
+        2,
         2,
         null,
-        null,
-        1,
         2,
         2,
-        null,
-        2,
-        1,
-        1,
-        null,
-        1,
-        1,
         null,
         null,
         null,
@@ -149,7 +149,8 @@
         null,
         null,
         null,
-        3,
+        null,
+        5,
         null,
         null
       ],
@@ -222,6 +223,6 @@
         0
       ]
     },
-    "timestamp": 1461533070
+    "timestamp": 1461546125
   }
 }

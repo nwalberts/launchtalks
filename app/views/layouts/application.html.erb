@@ -40,14 +40,19 @@
       </div>
 
       <div class="row column">
-        <% flash.each do |name, msg| %>
-          <% if msg.is_a?(String) %>
-            <div data-alert class="alert-box round <%= name.to_s == 'notice' ? 'success' : 'alert' %>">
-              <%= content_tag(:div, msg, class: "alert alert-#{name}", style: "color:black") %>
-            </div>
+        <% unless flash.empty? %>
+        <div id="notice">
+          <% flash.each do |name, msg| %>
+            <% if msg.is_a?(String) %>
+              <div data-alert class="alert-box round <%= name.to_s == 'notice' ? 'success' : 'alert' %>">
+                <%= content_tag(:div, msg, class: "alert alert-#{name}", style: "color:black") %>
+              </div>
+            <% end %>
           <% end %>
+        </div>
         <% end %>
       </div>
+
 
       <div class="container">
         <div class="row">
