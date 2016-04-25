@@ -16,6 +16,7 @@ gem 'fog'
 gem 'yt', '~> 0.25.5'
 gem 'omniauth'
 gem 'omniauth-google-oauth2'
+gem 'rMeetup'
 
 group :development, :test do
   gem 'database_cleaner'
