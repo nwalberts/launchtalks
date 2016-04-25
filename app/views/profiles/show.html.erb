@@ -11,6 +11,8 @@
     <% if @profile.avatar %>
     <%= image_tag @profile.avatar.thumb.url %>
      <br/>
+    <% elsif %>
+    <%=  image_tag @profile.avatar_link %>
     <% end %>
     <%= link_to "Change Profile Picture", edit_profile_path(@profile) %>
   </div>

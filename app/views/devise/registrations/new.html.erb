@@ -1,4 +1,4 @@
-<h2>Sign up</h2>
+<p class="form-header">Sign up</p>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), :html => { :multipart => true}) do |f| %>
   <%= devise_error_messages! %>
@@ -35,5 +35,3 @@
     <%= f.submit "Sign up" %>
   </div>
 <% end %>
-
-<%= render "devise/shared/links" %>

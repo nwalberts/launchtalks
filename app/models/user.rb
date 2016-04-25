@@ -13,9 +13,6 @@ class User < ActiveRecord::Base
 
   def self.find_for_google_oauth2(access_token, signed_in_resource=nil)
     data = access_token.info
-    names = data["name"].split(" ")
-    first_name = names[0]
-    last_name = names[1]
     user = User.where(:provider => access_token.provider, :uid => access_token.uid ).first
     if user
       return user
@@ -24,13 +21,15 @@ class User < ActiveRecord::Base
       if registered_user
         return registered_user
       else
-        user = User.create(first_name: first_name,
-          last_name: last_name,
+        user = User.create(first_name: data["first_name"],
+          last_name: data["last_name"],
           provider: access_token.provider,
           email: data["email"],
           uid: access_token.uid,
           password: Devise.friendly_token[0,20]
         )
+        user.profile.avatar_link = data["image"]
+        return user
       end
    end
 end
