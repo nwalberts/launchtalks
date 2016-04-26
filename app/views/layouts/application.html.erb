@@ -22,6 +22,7 @@
               <% if current_user %>
               <li><%= link_to "View Profile", profile_path(current_user), class: "nav-link"%></li>
               <li><%= link_to "Log Out", destroy_user_session_path, class: "nav-link" %></li>
+              <li><%= link_to "Meetups", meetups_path, class: "nav-link" %></li>
               <% end %>
 
               <% if current_user == nil %>
@@ -31,12 +32,20 @@
               <% end %>
           </ul>
         </div>
+    
+
         <div class="top-bar-right">
           <ul class="menu">
-            <li><input type="search" placeholder="Search"></li>
-            <li><button type="button" class="button">Search</button></li>
+            <div class="search-form">
+              <%= form_tag(presentations_path, :method => "get", id: "search-form") do %>
+                <%= text_field_tag :search, params[:search], placeholder: "Search Presentations" %>
+                <%= submit_tag "Search", :name => nil, class: "button" %>
+              <% end %>
+            </div>
           </ul>
         </div>
+
+
       </div>
 
       <div class="row column">

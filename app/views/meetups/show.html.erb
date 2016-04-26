@@ -1,0 +1,14 @@
+<br>
+
+<div class="profile-page callout">
+
+  <h2> <%= @meetup.name %> </h2>
+
+  <div class="presentation-description callout">
+    <p> URL: <a href="<%= @meetup.link %>"> <%= @meetup.name %></a> </p>
+    <p> <%= @meetup.city%> <%= @meetup.state %> </p>
+    <p> Description: <%= markdown(@meetup.description) %> </p>
+  </div>
+  <br>
+    <%= link_to 'Back', meetups_path%>
+</div>
