@@ -1,0 +1,18 @@
+<div class="main">
+  <div class="main-head">
+    <h1>Meetups in Boston</h1>
+  </div>
+
+  <br>
+
+  <div class="callout">
+    <ul>
+      <% @meetups.each do |meetup| %>
+        <li>
+        <%= meetup.name %>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+
+</div>
