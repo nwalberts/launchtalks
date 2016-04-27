@@ -19,8 +19,5 @@ feature "visitor sees show page for a meetup" do
     expect(page).to have_content meetup.city
     expect(page).to have_content meetup.state
     expect(page).to have_content "Best place to hone your public speaking skills!"
-
   end
-
-
 end
