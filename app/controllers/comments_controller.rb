@@ -1,5 +1,4 @@
 class CommentsController < ApplicationController
-
   def new
     @presentation = Presentation.find(params[:presentation_id])
     @comment = Comment.new
