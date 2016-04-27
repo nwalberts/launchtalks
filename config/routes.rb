@@ -7,9 +7,14 @@ Rails.application.routes.draw do
     get "users/sign_out" => "devise/sessions#destroy"
   end
 
-  resources :presentations
+  resources :presentations do
+    resources :comments, only: [:new, :create, :show]
+  end
+
   resources :meetups, only: [:index, :show]
-  resources :profiles, only: [:show, :edit, :update]
 
   resources :users, only: [:index, :show, :destroy]
+
+  resources :profiles, only: [:show, :edit, :update]
+
 end
