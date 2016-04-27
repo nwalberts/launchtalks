@@ -10,6 +10,14 @@
     <%= stylesheet_link_tag "application", media: 'all' %>
     <%= javascript_include_tag "application" %>
     <%= csrf_meta_tags %>
+<% @nick = 3 %>
+
+<% if @nick == 2 %>
+<%= @status = "OPEN!" %>
+<% else %>
+<%= "CLOSED!" %>
+<% end %>
+
 
   </head>
 
@@ -32,7 +40,7 @@
               <% end %>
           </ul>
         </div>
-    
+
 
         <div class="top-bar-right">
           <ul class="menu">
