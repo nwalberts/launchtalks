@@ -22,5 +22,5 @@ feature "visitor sees show page for a meetup" do
 
   end
 
-  
+
 end

@@ -13,6 +13,10 @@ class PresentationsController < ApplicationController
 
   def show
     @presentation = Presentation.find(params[:id])
+    @comments = @presentation.comments.order(created_at: :desc)
+    if user_signed_in?
+      @profile = current_user.profile
+    end
   end
 
   def new

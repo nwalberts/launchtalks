@@ -16,8 +16,20 @@
     <p> Description: <%= @presentation.description %> </p>
   </div>
   <br>
-</div>
 
   <% if current_user == @presentation.user %>
     <%= link_to 'Edit Presentation', edit_presentation_path(@presentation)%>
   <% end %>
+
+  <div class="review-links">
+    <% if current_user %>
+      <li><%= link_to 'Add a Comment', new_presentation_comment_path(@presentation), class: "nav-link" %></li>
+    <% end %>
+
+    <% if current_user == nil %>
+        <p>Want to add a comment? Please <%= link_to 'sign in', new_user_session_path, class: "nav-link" %></p>
+    <% end %>
+  </div>
+
+  <%= render './comments/index' %>
+</div>

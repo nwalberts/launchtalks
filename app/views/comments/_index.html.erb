@@ -1,0 +1,10 @@
+<h5>Comments:</h5>
+<% @comments.each do |comment| %>
+    <div class="callout secondary review-items">
+      <span style="font-size: 11pt"> <%= link_to comment.user.first_name + ":", profile_path(@presentation.user)%> </span>
+      <p>
+        <%= comment.body %>
+      </p>
+
+    </div>
+<% end %>
