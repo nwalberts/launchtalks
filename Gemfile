@@ -17,6 +17,7 @@ gem 'yt', '~> 0.25.5'
 gem 'omniauth'
 gem 'omniauth-google-oauth2'
 gem 'httparty'
+gem 'redcarpet'
 
 
 group :development, :test do

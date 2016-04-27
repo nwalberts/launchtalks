@@ -8,8 +8,9 @@ class Meetup < ActiveRecord::Base
   validates :lon, presence: true
   validates :lat, presence: true
 
+
   def self.meetups
-    response = HTTParty.get('https://api.meetup.com/find/groups?key=514468274d162321967511415366af&zip=02111&radius=5&topic_id=9300&upcoming_events=true&sign=true')
+    response = HTTParty.get("https://api.meetup.com/find/groups?key=#{ENV["MEETUP_KEY"]}&zip=02111&radius=5&topic_id=9300&upcoming_events=true&sign=true")
     response.each do |meetup|
       Meetup.create(
       name: meetup["name"],

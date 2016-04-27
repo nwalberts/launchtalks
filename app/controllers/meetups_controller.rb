@@ -4,10 +4,10 @@ class MeetupsController < ApplicationController
     @meetups = Meetup.all
   end
 
-  # def show
-  #   @presentation = Presentation.find(params[:id])
-  # end
-  #
+  def show
+    @meetup= Meetup.find(params[:id])
+  end
+
   # def new
   #   @presentation = Presentation.new
   # end

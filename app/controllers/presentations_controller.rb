@@ -3,7 +3,12 @@ class PresentationsController < ApplicationController
     if user_signed_in?
       @profile = current_user.profile
     end
-    @presentations = Presentation.all.order(created_at: :desc)
+
+    if params[:search]
+      @presentations = Presentation.search(params[:search]).order(created_at: :desc)
+    else
+      @presentations = Presentation.all.order(:title)
+    end
   end
 
   def show

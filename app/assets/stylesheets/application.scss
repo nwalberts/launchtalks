@@ -68,7 +68,19 @@
 
  .top-bar-right {
    padding: 15px;
+   width: 420px;
  };
+
+
+ #search {
+  display: inline;
+}
+
+ .button {
+   float: right;
+   display: inline-block;
+   vertical-align: top;
+ }
 
 
 .email {

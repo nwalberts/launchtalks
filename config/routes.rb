@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   end
 
   resources :presentations
-  resources :meetups, only: [:index]
+  resources :meetups, only: [:index, :show]
   resources :profiles, only: [:show, :edit, :update]
 
   resources :users, only: [:index, :show, :destroy]

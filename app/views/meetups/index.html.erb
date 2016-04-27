@@ -1,6 +1,6 @@
 <div class="main">
   <div class="main-head">
-    <h1>Meetups in Boston</h1>
+    <h1>Public Speaking Meetups in Boston</h1>
   </div>
 
   <br>
@@ -9,7 +9,7 @@
     <ul>
       <% @meetups.each do |meetup| %>
         <li>
-        <%= meetup.name %>
+        <%= link_to meetup.name, meetup_path(meetup)%>
         </li>
       <% end %>
     </ul>
